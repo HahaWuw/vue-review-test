@@ -7,21 +7,27 @@
   </div>
 </template>
 <script>
+var obj = {
+  name: 'claven jiang',
+  age: '29',
+  sex: '男',
+  eat: function() {
+    console.log('eat everyday')
+  },
+  play: function() {
+    console.log('he likes palying games!')
+  }
+}
+
 export default {
   // 1.字面量的方式创建对象
-  var obj = {
-    name: 'claven jiang',
-    age: '29',
-    sex: '男',
-    eat: function() {
-      console.log('eat everyday')
-    },
-    play: function() {
-      console.log('he likes palying games!')
+  methods: {
+    printObj() {
+      console.log(obj.name)
     }
   },
-  methods: {
-    
+  created() {
+    this.printObj()
   }
 }
 </script>
